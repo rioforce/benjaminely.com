@@ -6,17 +6,158 @@ html {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #000000;
   padding: 0;
   margin: 0;
-  font-family: "Josefin Slab", serif;
+  font-family: "Raleway", serif;
   font-size: 17px;
+  color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Bitter", serif;
+  font-family: "Raleway", serif;
+  font-weight: 400;
+}
+
+a {
+  color: white;
+  text-decoration-style: dotted;
+/*  border-bottom: 1px solid white;*/
+}
+
+a:hover {
+  opacity: 0.9;
 }
 
 .header {
-  background-image: url("/images/bg.jpg")
+  background-image: url("/images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+/*  background-position: center;*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 12em;
+  padding-bottom: 12em;
+}
+
+/*
+#header-img {
+  position: relative;
+  margin-top: -25em;
+  width: 100%;
+  z-index: -2;
+}
+*/
+
+.header h1 {
+position: relative;
+  text-align: center;
+  font-size: 4em;
+  font-weight: 100;
+  cursor: default;
+}
+
+#home-link a {
+  text-decoration: none;
+}
+
+#home-link a:hover {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+#home-link h1:hover {
+    cursor: pointer !important;
+}
+
+/*    SOCIALS    */
+.socials {
+  text-align: center;
+/*  margin-top: 5em;*/
+}
+
+.nav-social {
+  padding-right: 1em;
+}
+
+.nav-social li {
+  display: inline;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.nav-social a {
+  text-decoration: none;
+  color: white;
+  font-size: 2.5em;
+}
+
+.nav-social .fa-youtube:hover,
+.nav-social .fa-youtube:focus,
+.nav-social .fa-youtube:active {
+  color: #E62117;
+}
+
+.nav-social .fa-twitter:hover,
+.nav-social .fa-twitter:focus,
+.nav-social .fa-twitter:active {
+  color: #1da1f2;
+}
+
+.nav-social .fa-instagram:hover,
+.nav-social .fa-instagram:focus,
+.nav-social .fa-instagram:active {
+  background-image: linear-gradient(270deg, #BC32A4 0%, #E03768 50%, #F67C33 100%);
+  border-radius: 35%;
+/*  padding: 0px 1.5px 0px 1.5px;*/
+  color: white;
+/*  margin: 0px -1.5px 0 -1.5px;*/
+}
+
+
+/*    PROJECTS    */
+
+.projects ul {
+  text-align: center;
+}
+
+.projects li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 2em 0 2em
+}
+
+.projects h2 {
+  text-align: center;
+}
+
+/*    INFOPAGE    */
+
+.infopage {
+margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+}
+
+.infopage h1 {
+  text-align: center;
+}
+
+.infopage #infopage-youtub {
+/*  float:left;*/
+/*  margin-right: 2em;*/
+/*  margin-left: auto;*/
+/*  margin-right: auto;*/
+  text-align: center;
+}
+
+.infopage p {
+  float: left;
+  display: block;
+  line-height: 1.5;
+}
+
+.infopage #infopage-featured-image img{
+  width: 100%;
 }
