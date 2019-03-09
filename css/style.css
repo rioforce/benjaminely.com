@@ -30,7 +30,7 @@ a:hover {
 }
 
 .header {
-  background-image: url("/images/bg.jpg");
+  background-image: url("../images/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 /*  background-position: center;*/
@@ -160,4 +160,9 @@ margin-left: auto;
 
 .infopage #infopage-featured-image img{
   width: 100%;
+}
+
+
+pa-carousel-widget {
+  vertical-align: middle;
 }
