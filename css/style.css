@@ -710,12 +710,14 @@ video.fullscreen {
 
 /* --------WATCH PAGE---------*/
 
-#watch-page {
+#home-page,
+#post-page {
   background-color: #181818;
   color: white;
 }
 
-#watch-page .content {
+#home-page .content,
+#post-page .content {
   display: flex;
 }
 
@@ -890,6 +892,10 @@ footer li {
   background: white;
 }
 
+#post-page .post-title {
+
+}
+
 /*------QUERIES------*/
 
 @media (max-width: 1400px) {
@@ -902,7 +908,7 @@ footer li {
 }
 
 @media (max-width: 1050px) {
-  #watch-page .content {
+  #home-page .content {
     display: block;
   }
 

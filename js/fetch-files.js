@@ -1,4 +1,4 @@
-export async function fetchHtmlFile(file) {
+export async function fetchTextFile(file) {
     try {
         const response = await fetch(file);
         return await response.text();

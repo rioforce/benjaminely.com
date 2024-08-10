@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body id="home-page">
+<body id="post-page">
   <div class="container">
     <div class="content">
 
@@ -20,17 +20,19 @@
       </nav>
 
       <!-- MAIN PAGE CONTENT -->
-      <main id="watch-main">
-        <h2>Blog Posts</h2>
-        <div class="posts-list">
-          <h3>No posts found.</h3>
-        </div>
+      <main>
+        <h2 class="post-title"></h2>
+        <p class="post-date"></p>
+        <p class="post-author"></p>
+        <div class="post-content"></div>
       </main>
   </div>
 
   <footer id="site-footer"></footer>
+  </div>
 
-  <script type="module" src="js/injection.js"></script>
-  <script type="module" src="js/list-all-posts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script type="module" src="../../js/injection.js"></script>
+  <script type="module" src="../../js/load-post.js"></script>
 </body>
 </html>

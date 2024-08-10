@@ -1,9 +1,9 @@
-import { fetchHtmlFile, fetchJsonFile } from "./fetch-files.js";ç
+import { fetchTextFile, fetchJsonFile } from "./fetch-files.js";
+import { formatPostDate } from "./post-tools.js";
 
 // Function to generate the dynamic post list
 async function generatePostsList() {
     const postsListContainer = document.querySelector('.posts-list');
-    const postDateFormat = {year: 'numeric', month: 'long', day: 'numeric'};
 
     // Fetch posts data from external file
     const allPosts = await fetchJsonFile('../posts/post-list.json');
@@ -14,7 +14,7 @@ async function generatePostsList() {
     }
 
     // Get the HTML template to use
-    const template = await fetchHtmlFile("../templates/post-item.html");
+    const template = await fetchTextFile("../templates/post-item.html");
 
     // Map each post slug into a fetched request so we load them in order
     let postMetaUrls = allPosts.map(function(slug) {
@@ -36,14 +36,9 @@ async function generatePostsList() {
                 thisPost = thisPost.replace(new RegExp(`:post-${key}:`, "g"), postMeta[key]);
             });
 
-            // The time portion does not matter but is required here to make the dates parse correctly
-            let postDate = new Date(`${postMeta.date}T00:00:00`);
-            thisPost = thisPost.replace(/:post-date:/g, postDate.toLocaleString('en-US', postDateFormat));
-
-            // Add the URL to the post
-            thisPost = thisPost.replace(/:post-url:/g, `/posts/${allPosts[index]}/index.html`);
-
-            // Add the link to the post into the page
+            // Add the post URL, date, and link to the post
+            thisPost = thisPost.replace(/:post-url:/g, `/posts/${allPosts[index]}/`);
+            thisPost = thisPost.replace(/:post-date:/g, formatPostDate(postMeta.date));
             postsListContainer.insertAdjacentHTML("beforeend", thisPost);
         });
     });
