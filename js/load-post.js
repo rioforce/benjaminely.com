@@ -43,4 +43,3 @@ async function loadPost() {
 }
 
 document.addEventListener("DOMContentLoaded", async () => { loadPost(); });
-``
